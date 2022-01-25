@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -34,5 +32,40 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* my style */
+.ourTitle{
+  color: #2b6777;
+}
+.happy-client{
+  background: linear-gradient(to bottom, #25656bc9,rgba(18, 30, 36, 0.842)), url("https://preview.colorlib.com/theme/counselor/images/xbg_4.jpg.pagespeed.ic.uyyupfLttr.webp") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.swiper-pagination .swiper-pagination-bullet{
+  background-color: #f1f1f1;
+}
+.map-marker{
+  color: #2b6777;
+}
+.footer{
+  background-color: #f4f8fc;
+  z-index: 1;
+}
+.copywrite{
+  background-color: #2b6777;
+}
+#seach-area .shape{
+  animation: shapeAnimate 15s linear infinite;
+}
+@keyframes shapeAnimate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }
