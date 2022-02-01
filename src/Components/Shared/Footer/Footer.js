@@ -7,68 +7,63 @@ const Footer = () => {
         <div className="container py-5">
           <div className="row py-5">
             <div className="col-md-3 text-start">
-              <h3 className="text-uppercase font-weight-bold mb-4">
+              <h4 className="font-weight-bold mb-3 footer-brand">
                 KhujaKhuji.com
-              </h3>
-              <p>
-              Best solution for your it startup business consecteturadipiscing elit. Scelerisque amet odio velit auctor. nam elit nulla.
+              </h4>
+              <p className="footer-subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                odit.
               </p>
+              <div className="d-flex flex-row justify-content-lg-start justify-content-center py-4 py-lg-0  gap-3">
+                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-instagram"></i>
+                <i className="fab fa-twitter"></i>
+                <i className="fab fa-linkedin"></i>
+              </div>
             </div>
 
             <div className="col-md-2 mx-auto">
-              <h5 className="text-uppercase font-weight-bold mb-4">Quick Link</h5>
+              <h6 className="text-uppercase font-weight-bold mb-4">
+                Quick Link
+              </h6>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#!">Link 1</a>
+                  <a href="#!">Home</a>
+                </li>
+                <li className="py-2">
+                  <a href="#!">All ads</a>
                 </li>
                 <li>
-                  <a href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Link 4</a>
+                  <a href="#!">Contact Us</a>
                 </li>
               </ul>
             </div>
 
             <div className="col-md-2 mx-auto">
-              <h5 className="text-uppercase font-weight-bold mb-4">
-              About Us
-              </h5>
+              <h6 className="text-uppercase font-weight-bold mb-4">About Us</h6>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#!">Link 1</a>
+                  <a href="#!">About Us</a>
+                </li>
+                <li className="py-2">
+                  <a href="#!">Terms</a>
                 </li>
                 <li>
-                  <a href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Link 4</a>
+                  <a href="#!">Privacy</a>
                 </li>
               </ul>
             </div>
 
             <div className="col-md-2 mx-auto">
-              <h5 className="text-uppercase font-weight-bold mb-4">
-              Services
-              </h5>
+              <h6 className="text-uppercase font-weight-bold mb-4">
+                My Account
+              </h6>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#!">Link 1</a>
+                  <a href="#!">Login</a>
                 </li>
-                <li>
-                  <a href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Link 4</a>
+                <li className="py-2">
+                  <a href="#!">Register</a>
                 </li>
               </ul>
             </div>

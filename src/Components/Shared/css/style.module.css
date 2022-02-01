@@ -1,9 +1,9 @@
 .Navbarcolor {
-  background-color: #2b6777;
+  /* background-color: #2b6777; */
 }
 .banner {
-  background: linear-gradient(to bottom, #4b949ba4, rgba(18, 30, 36, 0.301)),
-    url("../../../images/banner-3.new.PNG");
+  background: linear-gradient(to bottom, rgba(1, 22, 32, 0.623), rgba(1, 22, 32, 0.644)),
+    url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/02956957490547.59d7a60d50103.gif");
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -32,23 +32,7 @@
 .ourInputField{
     background-color: #f4f8fc;
 }
-.searchbox {
-  background-color: #f4f8fc;
-  position: relative;
-  margin-top: -45px;
-  box-shadow: 0px 4px 8px 0px #ccc;
-}
-.searchbtn {
-  border-color: #2b6777;
-  color: #2b6777;
-  border: none;
-  outline: none;
-  padding: 7px 30px;
-  font-size: 18px;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
+
 .choosecity {
   padding: 0px 0px;
 }
@@ -107,6 +91,7 @@
     transform: translateY(-25%) translateX(-40%);
     z-index: -1;
     animation: shapeAnimate 15s linear infinite;
+    display: none;
 }
 .shape5{
     position: absolute;
@@ -116,12 +101,35 @@
     z-index: -1;
     animation: shapeAnimate 15s linear infinite;
 }
-
+.searchInput{
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+.searchButton{
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: #2b6777;
+  color: #fff;
+}
 @keyframes shapeAnimate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width:991px) {
+  .shape1,
+  .shape2,
+  .shape3,
+  .shape4,
+  .shape5{
+    display: none;
+  }
+  .searchInput{
+  width: 100%;
   }
 }

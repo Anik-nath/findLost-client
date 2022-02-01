@@ -48,7 +48,7 @@ const Testimonial = () => {
                     alt=""
                   />
                 </div> */}
-                <div className="d-flex justify-content-center py-3">
+                <div className="d-flex justify-content-center pb-3">
                   <img style={{ width: "70px", height: "70px" }}
                     src={review.image}
                     alt=""

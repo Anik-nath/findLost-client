@@ -1,76 +1,48 @@
 import React from "react";
-import { Container, FormControl, InputGroup } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import { ChangeTitle } from "../../../generalFunction/titlechange";
 import ChooseCity from "../../ChooseCity/ChooseCity";
 import StyleSheet from "../../Shared/css/style.module.css";
 import Testimonial from "../../Shared/Testimonial/Testimonial";
 import Contact from "../Contact/Contact";
+import LatestAdd from "../LatestAdd/LatestAdd";
 
 const Home = () => {
+  ChangeTitle("Home");
   return (
     <div>
       <div className={StyleSheet.banner}>
         <div className="container py-5 text-center">
-          <h5 className="text-light display-6">Simple, fast and efficient</h5>
-          <h1 className="text-light py-3 display-4">LOST AND FOUND NEAR YOU</h1>
-          <Link to="/">
-            <button className={StyleSheet.ourbtn}>Find More</button>
-          </Link>
-        </div>
-      </div>
-      <div id="seach-area">
-        <Container className={StyleSheet.searchbox}>
-          <div className="d-flex justify-content-center py-4 align-items-center">
-            <div>
-              <InputGroup size="sm" >
-                <InputGroup.Text id="inputGroup-sizing-sm" className="py-2">
-                 What
-                </InputGroup.Text>
-                <FormControl
-                  aria-label="Small"
-                  aria-describedby="inputGroup-sizing-sm"
-                />
-              </InputGroup>
-            </div>
-            <div>
-              <InputGroup size="sm" >
-                <InputGroup.Text id="inputGroup-sizing-sm" className="py-2">
-                  Where
-                </InputGroup.Text>
-                <FormControl
-                  aria-label="Small"
-                  aria-describedby="inputGroup-sizing-sm"
-                />
-              </InputGroup>
-            </div>
-            <div>
-              <button className={StyleSheet.searchbtn}>Search</button>
-            </div>
+          <h6 className="text-light lead">Simple, fast and efficient</h6>
+          <h1 className="text-light py-2 h1">LOST AND FOUND NEAR YOU</h1>
+
+          <div className="w-75 mx-auto d-flex flex-row justify-content-center py-4 align-items-center">
+            <input
+              className={StyleSheet.searchInput}
+              type="text"
+              placeholder="What"
+            />
+            <input
+              className={StyleSheet.searchInput}
+              type="text"
+              placeholder="Where"
+            />
+            <button className={StyleSheet.searchButton} type="button">
+              <i className="fas fa-search px-2"></i>
+            </button>
           </div>
-          {/* shape */}
-          <div className="position-absolute shape  top-100 end-0">
-          <img
-            src="https://ozen-react.envytheme.com/images/projects/shape-5.png"
-            alt=""
-          />
         </div>
-          <div className="position-absolute shape  top-0 start-0">
-          <img
-            src="https://ozen-react.envytheme.com/images/projects/shape-4.png"
-            alt=""
-          />
-        </div>
-       
-        </Container>
       </div>
+
       <ChooseCity></ChooseCity>
+      <LatestAdd></LatestAdd>
       <div className="happy-client py-3 text-center">
         <Container className="py-3">
-            <div className="text-light">
+          <div className="text-light">
             <small>TESTIMONIAL</small>
-            <h1 className="display-6 fw-bold">Happy Clients</h1>
-            </div>
-        <Testimonial></Testimonial>
+            <h3 className="fw-bold">Success Stories</h3>
+          </div>
+          <Testimonial></Testimonial>
         </Container>
       </div>
       <Contact></Contact>
@@ -83,4 +55,6 @@ export default Home;
 /* 
 https://preview.themeforest.net/item/ecolife-multipurpose-ecommerce-shopify-theme/full_screen_preview/29946024?_ga=2.73815378.1756847630.1641737342-1191130943.1633288632
 https://www.lostings.com/
+
+
 */

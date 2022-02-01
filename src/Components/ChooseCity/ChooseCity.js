@@ -21,9 +21,10 @@ const ChooseCity = () => {
             <Row>
               {
                 location.map(location => 
-                  <Col key={location.id} className="text-start mb-3" lg="3" sm="4" md="4" xs="4">
-                <Link to="/" className="text-black text-decoration-none fs-6">
-                  <i className="fas fa-map-marker-alt map-marker pe-3"></i>{location.city} ({location.count})</Link>
+                  <Col key={location.id} className="text-start mb-3" lg="4" sm="4" md="4" xs="6">
+                <Link to="/" className="text-black text-decoration-none">
+                  <small><i className="fas fa-map-marker-alt map-marker pe-3"></i>{location.city} ({location.count})</small>
+                  </Link>
               </Col>
                   )
               }

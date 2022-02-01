@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
-import brand from '../../../images/logo1-removebg-preview.png'
-import stylesheet from '../../Shared/css/style.module.css';
+import useAuth from "../../../Firebase/Hooks/useAuth";
 
 const Navigation = () => {
+  const [shownavbar,setNavbar] = useState(false);
+  const {user} = useAuth();
+
+    const changeBackground = () =>{
+        if(window.scrollY >= 40){
+            setNavbar(true)
+        }
+        else{
+            setNavbar(false);
+        }
+    }
+    window.addEventListener('scroll',changeBackground);
   return (
     <div>
       <Navbar
-        className={stylesheet.Navbarcolor}
+        className={shownavbar ? 'NavbarActive' : ''}
         fixed="top"
         collapseOnSelect
         expand="lg"
         variant="dark"
       >
-        <Container>
+        <Container className="py-2">
           <Navbar.Brand className="d-flex flex-column align-items-center" as={HashLink} to="/home">
             {/* <img
               alt=""
@@ -29,39 +40,38 @@ const Navigation = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto text-center">
-              <Nav.Link className="text-light hoverMe" as={HashLink} to="/home">
-                Home
+            <Nav className="me-auto text-center text-dark">
+              <Nav.Link className="entryButton px-3 mt-3 mt-lg-0 mt-md-0" as={HashLink} to="/">
+              <i className="fas fa-plus"></i> Lost Entry
               </Nav.Link>
               <Nav.Link
-                className="text-light hoverMe"
+                className="entryButton px-3 ms-lg-3 ms-md-3 mt-3 mt-lg-0 mt-md-0"
                 as={HashLink}
-                to="/about"
+                to="/"
               >
-                About Us
+                <i className="fas fa-plus"></i> Found Entry
               </Nav.Link>
-              <Nav.Link className="text-light hoverMe" as={HashLink} to="/ads">
-                All ads
+            </Nav>
+            <Nav  className="ms-auto text-center">
+              {
+                !user.email ? 
+                <Nav.Link
+                className="text-light px-3 entryButton mt-3 mt-lg-0 mt-md-0"
+                as={HashLink}
+                to="/login"
+              >
+                Login
               </Nav.Link>
+              :
               <Nav.Link
-                className="text-light hoverMe"
+                className="text-light px-3 entryButton mt-3 mt-lg-0 mt-md-0"
                 as={HashLink}
-                to="/contact"
+                to="/login"
               >
-                Contact
+                Logout
               </Nav.Link>
-              <Nav.Link
-                className="text-light hoverMe"
-                as={HashLink}
-                to="/sign in"
-              >
-                Sign in
-              </Nav.Link>
-              <Navbar.Collapse className="justify-content-end">
-                <Navbar.Text className="text-light">
-                  Language
-                </Navbar.Text>
-              </Navbar.Collapse>
+              }
+            
             </Nav>
           </Navbar.Collapse>
         </Container>

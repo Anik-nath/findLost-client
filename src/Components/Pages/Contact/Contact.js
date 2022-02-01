@@ -16,8 +16,8 @@ const Contact = () => {
         </div>
         <div className="col-lg-6 col-12 col-md-12 sm-order-1">
           <Form>
-            <h1 className="mb-3 ourTitle">Get in Touch</h1>
-            <Row className="mb-0">
+            <h3 className="mb-3 ourTitle fw-bold">Get in Touch</h3>
+            <Row className="mb-0 row-cols-1 row-cols-lg-2 g-3">
               <Form.Group as={Col} controlId="formGridName">
                 <Form.Control
                   className={StyleSheet.ourInputField}
@@ -30,7 +30,7 @@ const Contact = () => {
               </Form.Group>
             </Row>
 
-            <Row className="mb-4">
+            <Row className="mb-4 row-cols-1 row-cols-lg-2 g-3 mt-1">
               <Form.Group as={Col} controlId="formGridCity">
                 <Form.Control className={StyleSheet.ourInputField} placeholder="Phone" />
               </Form.Group>
@@ -38,10 +38,10 @@ const Contact = () => {
               <Form.Group as={Col} controlId="formGridState">
                 <Form.Select className={StyleSheet.ourInputField} defaultValue="Choose...">
                   <option>Choose...</option>
-                  <option>office</option>
-                  <option>home</option>
-                  <option>shop</option>
-                  <option>road</option>
+                  <option>Phone</option>
+                  <option>Laptop</option>
+                  <option>MoneyBag</option>
+                  <option>PassPort</option>
                 </Form.Select>
               </Form.Group>
             </Row>
